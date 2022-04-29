@@ -1,12 +1,14 @@
 body {
 
+
     height: 1000px;
     left: 0%;
     right: 0%;
     top: 0px;
+    background: rgb(237,255,231);
 
-    background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 39.58%, rgba(207, 0, 99, 0) 100%), #CF4B00;
-    border-radius: 0px;
+
+    font-family: 'Gothic A1';
 }
 .text {
     padding-top: 10%;
@@ -14,7 +16,13 @@ body {
     padding-right: 29.58%;
 
 }
-.main {
+p{
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgba(178, 124, 20, 0.74), rgba(53, 94, 11, 0.89));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main1 {
     font-family: 'Gothic A1';
 
 
@@ -49,18 +57,63 @@ body {
 
     transition: 0.2s;
 
-    background: #FC440A;
+    background: #ffa033;
     border-radius: 10px;
-
-
-
-
-
-
-
-
 
     text-align: center;
 
     color: #FFFFFF;
+}
+
+
+
+#title {
+    background: linear-gradient(90deg, #FFFFFF -1.28%, rgba(255, 255, 255, 0.734583) -1.27%, rgba(255, 255, 255, 0) 102.88%), #25B44B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 8.54%;
+
+}
+.logo {
+
+    font-weight: bold;
+    font-size: 7rem;
+
+    line-height: 1;
+    padding-bottom: 6%;
+}
+
+
+.use {
+    font-size: 2.5rem;
+    color: #21b01d;
+    font-weight: bold;
+
+}
+.web {
+    font-size: 2.5rem;
+    color: #f89b0f;
+    font-weight: bold;
+}
+
+
+
+
+/* Navbar Section */
+.nav-item {
+    padding: 0 15px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+
+}
+.img{
+ position : relative ;
+    width: 580px;
+    height: 327px;
+
+    left: 750px;
+    top: -190px;
+
 }
