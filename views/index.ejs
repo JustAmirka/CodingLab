@@ -2,54 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-
-    <script src="https://cdn.tailwindcss.com"></script></head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <body>
-<section id="title">
-    <div class="container-fluid" >
-        <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">
-                <span class="use">Go</span><span class="web">Food</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">How does it work?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Subscribe</a>
-                    </li>
-
-                </ul>
+    <!-----------------------------NAVBAR----------------------------------->
+    <div>
+        <div class="antialiased">
+            <div class="w-full text-gray-700 bg-gradient-to-r from-lime-100 to-lime-500 shadow-xl dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <a href="#" class="text-2xl font-bold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-green-500">Go</span><span class="text-orange-500">Food</span></a>
+                        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Features</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">How Does It Work?</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-orange-400 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Subscribe</a>   
+                    </nav>
+                </div>
             </div>
-        </nav>
+        </div>
     </div>
-</section>
-</script>
-<div class="text">
 
-    <p class="main1">Subscription to food</p>
-    <p class="dop">Now you can forget about cooking with our service</p>
+    <!-----------------------------HERO----------------------------------->
+    <div class="w-screen flex items-center justify-center">
+        <div class="container flex flex-col md:flex-row items-center justify-between px-5 text-gray-700">
+            <div class="w-full lg:w-1/2 mx-8">
+                <div class="text-7xl text-green-500 font-dark font-extrabold mb-8">Subscription <br>to food</div>
+                <p class="text-2xl md:text-3xl font-light leading-normal mb-8">Now you can forget about cooking <br>with our service</p>
+                <a href="#" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-green-600">Subscribe</a>
+            </div>
+            
+            <div class="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">
+                <img src="./img/hero.png" class="" alt="">
+            </div>
+        </div>
+    </div>
 
-    <button class="button1">Subscribe</button>
-    <img class="img" src="/img/logo1.png">
-</div>
+    <!-------------------------ABOUT US----------------------->
+    <div>
+        <section class="text-blueGray-700 bg-white mt-20">
+            <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
+                <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">We offer affordable yet balanced diets for you</h1>
+                    <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">Maximum health benefit without breaking the bank is our core value</p>
+                </div>
+                <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+                    <img class="object-cover object-center rounded-lg " alt="hero" src="./img/about1.png">
+                </div>
+            </div>
+        </section>
+        <!----------->
+        <section class="text-blueGray-700 bg-white mt-18">
+            <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
+                <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+                    <img class="object-cover object-center rounded-lg " alt="hero" src="./img/about2.png">
+                </div>
+                <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:mb-0">
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Flexible plans for differently busy people </h1>
+                    <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">7 days plan</p>
+                    <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">14 days plan</p>
+                    <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">28 days plan</p>
+                </div>
+            </div>
+        </section>
+        <!----------->
+        <section class="text-blueGray-700 bg-white mt-18">
+            <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
+                <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Best quality for the best price</h1>
+                    <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">We work only with trusted suppliers of ingredients for our delicious meals. You don't have to worry about the food being fresh.</p>
+                </div>
+                <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+                    <img class="object-cover object-center rounded-lg " alt="hero" src="./img/about3.png">
+                </div>
+            </div>
+        </section>
+    </div>
 
+    <!-------------------------------------------------------------------------------->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+        <div class="text-center pb-12">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+                <div>
+                    <img class="object-center object-cover h-auto w-full" src="./img/icon1.png" alt="photo">
+                </div>
+                <div class="text-center py-8 sm:py-6">
+                    <p class="text-xl text-gray-700 font-bold mb-2">Dany Bailey</p>
+                    <p class="text-base text-gray-400 font-normal">Software Engineer</p>
+                </div>
+            </div>
+            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+                <div>
+                    <img class="object-center object-cover h-auto w-full" src="./img/icon2.png" alt="photo">
+                </div>
+                <div class="text-center py-8 sm:py-6">
+                    <p class="text-xl text-gray-700 font-bold mb-2">Lucy Carter</p>
+                    <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
+                </div>
+            </div>
+            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+                <div>
+                    <img class="object-center object-cover h-auto w-full" src="./img/icon3.png" alt="photo">
+                </div>
+                <div class="text-center py-8 sm:py-6">
+                    <p class="text-xl text-gray-700 font-bold mb-2">Jade Bradley</p>
+                    <p class="text-base text-gray-400 font-normal">Dev Ops</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!---------------------------------------------------------------->
+    <section class="text-blueGray-700 bg-white mt-20">
+        <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
+            <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+                <img class="object-cover object-center rounded-lg " alt="hero" src="./img/qp.png">
+            </div>
+            <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:mb-0">
+                <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Quality packaging</h1>
+                <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">Your meals come packaged with only food compatible materials</p>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------------------->
+    <div class="bg-white flex items-center justify-center mt-24 mb-24">
+        <div class="text-center">
+            <div class="text-7xl text-green-300 leading-5">"</div>
+            <div class="text-4xl font-medium max-w-xl text-xl">
+                “Many people make the mistake of saving money by wasting time.” <br> - J.R. Rim
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------FOOTER---------------------------------->
+    <div class="h-screen flex">
+        <div class="flex w-1/2 bg-gradient-to-bl from-gray-300 to-green-600 i justify-around items-center">
+          <div>
+            <h1 class="text-white font-bold text-4xl font-sans">Ready to get Started?</h1>
+            <div class="flex">
+                <button type="submit" class="block w-28 bg-orange-400 text-white mt-4 mr-4 py-2 rounded-md font-bold mb-2">Subscribe</button>
+                <button type="submit" class="block w-40 bg-transparent border-2 text-white mt-4 py-2 rounded-md font-bold mb-2">I have questions</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-1/2 justify-center items-center bg-white">
+          <form class="bg-white">
+            <h1 class="text-gray-800 font-bold text-2xl mb-1">Hello!</h1>
+            <p class="text-sm font-normal text-gray-600 mb-7">Get Your Free Account</p>
+            <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
+              <input class="pl-2 outline-none border-none" type="email" name="email" id="email" placeholder="Email Address" />
+            </div>
+            <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
+                <input class="pl-2 outline-none border-none" type="text" name="firstName" id="firstName" placeholder="First Name" />
+              </div>
+              <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
+                <input class="pl-2 outline-none border-none" type="text" name="lastName" id="lastName" placeholder="Last Name" />
+              </div>
+              <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
+                <input class="pl-2 outline-none border-none" type="text" name="phone" id="phone" placeholder="Phone Number" />
+              </div>
+            <div class="flex items-center border-2 py-2 px-3 rounded-md">
+              <input class="pl-2 outline-none border-none" type="password" name="password" id="password" placeholder="Password" />
+            </div>
+            <button type="submit" class="block w-full bg-green-500 mt-4 py-2 hover:text-white hover:bg-green-600 rounded-md text-white font-semibold mb-2">Login</button>
+            <span class="text-sm ml-2 hover:text-orange-500 cursor-pointer">Forgot Password ?</span>
+          </form>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 </html>

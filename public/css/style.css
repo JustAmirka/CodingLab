@@ -1,7 +1,6 @@
 body {
 
 
-    height: 1000px;
     left: 0%;
     right: 0%;
     top: 0px;
@@ -12,17 +11,17 @@ body {
 }
 .text {
     padding-top: 10%;
-    padding-left: 8.54%;
     padding-right: 29.58%;
+    padding-left: 8.54%;
 
 }
-p{
-    font-size: 72px;
+
+
+
+.main1 {
     background: -webkit-linear-gradient(rgba(178, 124, 20, 0.74), rgba(53, 94, 11, 0.89));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-.main1 {
     font-family: 'Gothic A1';
 
 
@@ -36,6 +35,9 @@ p{
     color: #FFFFFF;
 }
 .dop{
+    background: -webkit-linear-gradient(rgba(178, 124, 20, 0.74), rgba(53, 94, 11, 0.89));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     padding-top: 44px;
     padding-bottom: 60px;
@@ -117,3 +119,496 @@ p{
     top: -190px;
 
 }
+
+
+.frame{
+
+    padding-left: 8.54%;
+
+}
+
+
+
+
+.img1{
+    position: relative;
+    width: 487px;
+    height: 342px;
+    left: 55%;
+    top: calc(50% - 342px/2 + 0.5px);
+
+
+    border-radius: 0px;
+}
+.img2{
+    position:  relative;
+    width: 474px;
+    height: 375px;
+    left: -30px;
+    top: 47px;
+
+
+}
+.img3{
+    position: relative;
+    width: 415px;
+    height: 367px;
+    left: 60%;
+    top: -50px;
+    border-radius: 75px;
+
+
+
+}
+.img4{
+    position: relative;
+    width: 72px;
+    height: 47px;
+
+
+
+
+}
+.img5{
+    position: relative;
+    width: 72px;
+    height: 47px;
+
+
+
+}
+.img6{
+    position: relative;
+    width: 72px;
+    height: 47px;
+    top: 0px;
+}
+.img7{
+    position: relative;
+    width: 407px;
+    height: 363px;
+    left: 76px;
+    top: 175px;
+
+    border-radius: 70px;
+}
+.img8{
+    position: relative;
+    left: 0.08%;
+    right: -0.13%;
+    top: 200px;
+    bottom: 5.5%;
+
+
+}
+
+.text1{
+    position: relative;
+    height: 96px;
+    right: 0%;
+    top: 50px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    /* or 126% */
+
+
+    color: #000000;
+}
+
+.text2{
+    position: relative;
+    height: 96px;
+    right: 0%;
+    top: 168px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+width: 352px;
+
+    color: #6B6B6B;
+}
+.text3{
+    position: relative;
+    height: 96px;
+    left: 57%;
+    right: -26.22%;
+    top: -250px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    /* or 126% */
+
+
+    color: #000000;
+
+}
+.text4{
+    position: relative;
+    height: 127px;
+    left: 57%;
+    right: 13.11%;
+    top: -200px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    /* or 160% */
+
+
+    color: #6B6B6B;
+}
+.text5{
+    position: relative;
+    height: 96px;
+    right: 7%;
+    top: 145px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    /* or 126% */
+
+
+    color: #000000;
+}
+.text6{
+    position: relative;
+    height: 150px;
+left:0;
+    right: 7%;
+    top: 190px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    /* or 120% */
+
+
+    color: #6B6B6B;
+}
+.text7{
+    position: relative;
+    width: 181px;
+    height: 24px;
+    left: calc(50% - 181px/2 - 0.5px);
+    top: 75px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+
+
+    color: #000000;
+}
+.text8{
+    position: relative;
+    width: 130px;
+    height: 24px;
+    left: calc(50% - 130px/2);
+    top: 75px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+
+    color: #000000;
+}
+.text9{
+    position: relative;
+    width: 151px;
+    height: 24px;
+    left: calc(50% - 151px/2 + 0.5px);
+    top: 75px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+
+    color: #000000;
+}
+table{
+    text-align: center;
+}
+.text10{
+    position: relative;
+    width: 371px;
+    height: 60px;
+    left: calc(50% - 371px/2 - 0.5px);
+    top: 116px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #6B6B6B;
+}
+.text11{
+    position: relative;
+    width: 371px;
+    height: 60px;
+    left: calc(50% - 371px/2 - 0.5px);
+    top: 116px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #6B6B6B;
+
+}
+.text12 {
+    position: relative;
+    width: 371px;
+    height: 120px;
+    left: calc(50% - 371px/2 + 0.5px);
+    top: 116px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+    text-align: center;
+
+    color: #6B6B6B;
+}
+.text13 {
+    position: relative;
+    height: 96px;
+    left: 12.89%;
+    right: -11.11%;
+    top: 45px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    /* or 126% */
+
+
+    color: #000000;
+}
+.text14 {
+    position: relative;
+    height: 90px;
+    left: 12.89%;
+    right: 13.78%;
+    top: 50px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+
+    color: #6B6B6B;
+}
+.text15 {
+    position: relative;
+    width: 700px;
+    height: 120px;
+    left: calc(50% - 700px/2);
+    top: 100px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    /* or 133% */
+
+    text-align: center;
+
+    color: #6B6B6B;
+
+}
+
+
+
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 0% auto;
+    background-image: url("/img/Footer.png");
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    top:500px;
+    left:0px;
+}
+
+.footerText{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);*
+text-decoration: none;
+    padding: .8em 5em ;
+
+    font-family: 'Gothic A1';
+
+    font-weight: 400;
+    font-size: 38px;
+
+    color: #FFFFFF;
+
+
+}
+
+
+.btn {
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);*
+    text-decoration: none;
+    padding: .8em 5em ;
+
+
+    transition: 0.2s;
+
+    background: #ffa033;
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.btn2 {
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);*
+    text-decoration: none;
+    padding: .8em 5em ;
+
+
+    transition: 0.2s;
+
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+/*
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);*/
+
+
+
+
+/*
+<div class="container">
+                      <img src="/img/Footer.png" alt="Snow" class="responsive">
+                                                                              <button class="btn">Button</button>
+                                                                                                          </div>
+                                                                                                            </body>
+                                                                                                              </html>
+
+
+
+                                                                                                                .responsive {
+                                                                                                                    position	: relative;
+                                                                                                                    width: 100%;
+                                                                                                                    height: 300px;
+                                                                                                                }
+.container {
+    position: relative;
+}
+
+
+
+.btn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 16px;
+    padding: .8em 5em ;
+
+    cursor: pointer;
+
+    text-align: center;
+    transition: 0.2s;
+    background: #ffa033;
+
+}
+
+.container .btn:hover {
+    background-color: black;
+}
+
+
+.button2{
+    display: inline-block;
+
+    text-decoration: none;
+    padding: .8em 5em ;
+
+
+    transition: 0.2s;
+
+    background: #ffa033;
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}*/
