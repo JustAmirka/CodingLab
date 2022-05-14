@@ -8,7 +8,7 @@ var express = require("express"),
     User = require("./models/user");
 const ejs=require('ejs');
 const app = express();
-
+const MongoClient = require('mongodb').MongoClient;
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:true}))
@@ -16,6 +16,13 @@ app.use(express.static('public'))
 
 
 app.use("/", require("./home"));
+
+
+app.use("/about", require("./about"));
+
+
+app.use("/HowIW", require("./HowIW"));
+app.use("/features", require("./features"));
 
 const dbConfig = require('./config/database.config.js');
 
@@ -51,7 +58,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Showing home page
 app.get("/", function (req, res) {
-    res.render("home");
+    res.render("index");
 });
 
 // Showing secret page
@@ -60,22 +67,22 @@ app.get("/secret", isLoggedIn, function (req, res) {
 });
 
 // Showing register form
-app.get("/register", function (req, res) {
-    res.render("register");
+app.get("/index", function (req, res) {
+    res.render("index");
 });
 
 // Handling user signup
-app.post("/register", function (req, res) {
-    var phone = req.body.phone
+app.post("/index", function (req, res) {
+    var username = req.body.username
     var firstName = req.body.firstName
     var lastName = req.body.lastName
     var email = req.body.email
     var password = req.body.password
-    User.register(new User({ email: email, firstName: firstName, lastName: lastName, phone: phone  }),
+    User.register(new User({ email: email, firstName: firstName, lastName: lastName, username: username  }),
         password, function (err, user) {
             if (err) {
                 console.log(err);
-                return res.render("register");
+                return res.render("index");
             }
 
             passport.authenticate("local")(
@@ -96,6 +103,23 @@ app.post("/login", passport.authenticate("local", {
     failureRedirect: "/login"
 }), function (req, res) {
 });
+
+/*app.get('/secret', function(req, res) {
+    MongoClient.connect(dbConfig, { useUnifiedTopology: true }, (err, client) => {
+        if (err) return console.error(err);
+        const db = client.db('GoFood');
+        const collection = db.collection('users');
+        collection
+            .find()
+            .toArray()
+            .then((results) => {
+                res.render('secret.ejs', { users: results });
+            })
+            .catch((error) => {
+                res.redirect('/');
+            });
+    });
+})*/
 
 //Handling user logout
 app.get("/logout", function (req, res) {

@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoFood</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        #map
+        {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+
+
 </head>
 <body>
     <!-----------------------------NAVBAR----------------------------------->
@@ -24,10 +35,10 @@
                     </div>
                     
                     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Features</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">How Does It Work?</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-orange-400 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Subscribe</a>   
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
+                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-orange-400 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#subscribe">Subscribe</a>
                     </nav>
                 </div>
             </div>
@@ -40,7 +51,7 @@
             <div class="w-full lg:w-1/2 mx-8">
                 <div class="text-7xl text-green-500 font-dark font-extrabold mb-8">Subscription <br>to food</div>
                 <p class="text-2xl md:text-3xl font-light leading-normal mb-8">Now you can forget about cooking <br>with our service</p>
-                <a href="#" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-green-600">Subscribe</a>
+                <a href="#subscribe" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-green-600 hover:bg-orange-400 hover:text-white">Subscribe</a>
             </div>
             
             <div class="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">
@@ -100,7 +111,7 @@
                     <img class="object-center object-cover h-auto w-full" src="./img/icon1.png" alt="photo">
                 </div>
                 <div class="text-center py-8 sm:py-6">
-                    <p class="text-xl text-gray-700 font-bold mb-2">Dany Bailey</p>
+                    <p class="text-xl text-gray-700 font-bold mb-2">Delivery</p>
                     <p class="text-base text-gray-400 font-normal">Software Engineer</p>
                 </div>
             </div>
@@ -109,8 +120,8 @@
                     <img class="object-center object-cover h-auto w-full" src="./img/icon2.png" alt="photo">
                 </div>
                 <div class="text-center py-8 sm:py-6">
-                    <p class="text-xl text-gray-700 font-bold mb-2">Lucy Carter</p>
-                    <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
+                    <p class="text-xl text-gray-700 font-bold mb-2">Custom menu</p>
+                    <p class="text-base text-gray-400 font-normal">Our chefs will exclude any items of the menu if you have medical restrictions.</p>
                 </div>
             </div>
             <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
@@ -118,8 +129,8 @@
                     <img class="object-center object-cover h-auto w-full" src="./img/icon3.png" alt="photo">
                 </div>
                 <div class="text-center py-8 sm:py-6">
-                    <p class="text-xl text-gray-700 font-bold mb-2">Jade Bradley</p>
-                    <p class="text-base text-gray-400 font-normal">Dev Ops</p>
+                    <p class="text-xl text-gray-700 font-bold mb-2">Fast support</p>
+                    <p class="text-base text-gray-400 font-normal">Our support team will help you to find best menu for you and maintain contact through our shared journey.</p>
                 </div>
             </div>
         </div>
@@ -147,20 +158,59 @@
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------->
+    <div class="Adress">
+        <div class="contsiner" >
+            <div class="text-center">
+            <div class="text-4xl font-medium max-w-xl text-xl">
+                Our address
+            </div>
+            </div>
+            <div id="map" class="map" ></div>
 
+            <script>
+                function initMap(){
+                    var loc = {lat: 51.090872, lng: 71.418323 } ;
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: loc,
+                        zoom: 17
+                    });
+                    var marker = new google.maps.Marker( {
+                        map: map,
+                        position: loc,
+                        title: 'GoFood'
+                    });
+                }
+            </script>
+            <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAvEF9OG3-KbpcBWm-4IcMq8Zx3me0674&callback=initMap"
+                    defer
+            ></script>
+        </div>
+    </div>
     <!-----------------------------FOOTER---------------------------------->
-    <div class="h-screen flex">
+    <div class="h-screen flex" id="subscribe">
         <div class="flex w-1/2 bg-gradient-to-bl from-gray-300 to-green-600 i justify-around items-center">
           <div>
             <h1 class="text-white font-bold text-4xl font-sans">Ready to get Started?</h1>
-            <div class="flex">
-                <button type="submit" class="block w-28 bg-orange-400 text-white mt-4 mr-4 py-2 rounded-md font-bold mb-2">Subscribe</button>
-                <button type="submit" class="block w-40 bg-transparent border-2 text-white mt-4 py-2 rounded-md font-bold mb-2">I have questions</button>
-            </div>
+              <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto mt-4">
+                  <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">Leave Your Question</h1>
+                  <div class="space-y-4">
+                      <div>
+                          <label for="title" class="text-lx font-serif">Email:</label>
+                          <input type="email" placeholder="email" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                      </div>
+                      <div>
+                          <label for="description" class="block mb-2 text-lg font-serif">Question:</label>
+                          <textarea id="description" cols="30" rows="10" placeholder="Your Question" class="w-full font-serif  p-4 text-gray-600 bg-gray-50 outline-none rounded-md"></textarea>
+                      </div>
+                      <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-orange-400">Send</button>
+                  </div>
+              </div>
           </div>
         </div>
         <div class="flex w-1/2 justify-center items-center bg-white">
-          <form class="bg-white" action="/register" method="post">
+          <form class="bg-white" action="/index" method="post">
             <h1 class="text-gray-800 font-bold text-2xl mb-1">Hello!</h1>
             <p class="text-sm font-normal text-gray-600 mb-7">Get Your Free Account</p>
             <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
@@ -173,13 +223,13 @@
                 <input class="pl-2 outline-none border-none" type="text" name="lastName" id="lastName" placeholder="Last Name" />
               </div>
               <div class="flex items-center border-2 py-2 px-3 rounded-md mb-4">
-                <input class="pl-2 outline-none border-none" type="text" name="phone" id="phone" placeholder="Phone Number" />
+                <input class="pl-2 outline-none border-none" type="text" name="username" id="username" placeholder="Phone Number" />
               </div>
             <div class="flex items-center border-2 py-2 px-3 rounded-md">
               <input class="pl-2 outline-none border-none" type="password" name="password" id="password" placeholder="Password" />
             </div>
-            <button type="submit" class="block w-full bg-green-500 mt-4 py-2 hover:text-white hover:bg-green-600 rounded-md text-white font-semibold mb-2">Login</button>
-            <span class="text-sm ml-2 hover:text-orange-500 cursor-pointer">Forgot Password ?</span>
+            <button type="submit" class="block w-full bg-green-500 mt-4 py-2 hover:text-white hover:bg-green-600 rounded-md text-white font-semibold mb-2">Register</button>
+            <span class="text-sm ml-2 hover:text-orange-500 cursor-pointer">Login</span>
           </form>
         </div>
       </div>

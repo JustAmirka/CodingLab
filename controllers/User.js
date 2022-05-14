@@ -3,7 +3,7 @@ const UserModel = require('../models/user')
 var bcrypt = require("bcryptjs");
 // Create and Save a new user
 exports.create = async (req, res) => {
-    if (!req.body.email && !req.body.firstName && !req.body.lastName && !req.body.phone) {
+    if (!req.body.email && !req.body.firstName && !req.body.lastName && !req.body.username) {
         res.status(400).send({ message: "Content can not be empty!" });
     }
 
@@ -11,7 +11,7 @@ exports.create = async (req, res) => {
         email: req.body.email,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        phone: req.body.phone,
+        username: req.body.username,
         password: bcrypt.hashSync(req.body.password, 8)
     });
 

@@ -16,7 +16,7 @@ let UserSchema = new Schema ({
         type: String,
         default: ''
     },
-    phone: String,
+    username: String,
     password: String,
 });
 
