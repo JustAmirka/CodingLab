@@ -21,11 +21,11 @@
 <body>
     <!-----------------------------NAVBAR----------------------------------->
     <div>
-        <div class="antialiased">
-            <div class="w-full text-gray-700 bg-gradient-to-r from-lime-100 to-lime-500 shadow-xl dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div class="antialiased bg-gray-100">
+            <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
                 <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                     <div class="flex flex-row items-center justify-between p-4">
-                        <a href="#" class="text-2xl font-bold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-green-500">Go</span><span class="text-orange-500">Food</span></a>
+                        <a href="#" class="text-2xl font-bold tracking-widest rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-lime-300">Go</span><span class="text-amber-300">Food</span></a>
                         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                                 <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -33,12 +33,12 @@
                             </svg>
                         </button>
                     </div>
-                    
                     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
-                        <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-orange-400 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#subscribe">Subscribe</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-emerald-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://t.me/gofooderbot">Our Bot</a>
+                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-amber-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#plans">Subscribe</a>
                     </nav>
                 </div>
             </div>
@@ -46,27 +46,95 @@
     </div>
 
     <!-----------------------------HERO----------------------------------->
-    <div class="w-screen flex items-center justify-center">
-        <div class="container flex flex-col md:flex-row items-center justify-between px-5 text-gray-700">
-            <div class="w-full lg:w-1/2 mx-8">
-                <div class="text-7xl text-green-500 font-dark font-extrabold mb-8">Subscription <br>to food</div>
-                <p class="text-2xl md:text-3xl font-light leading-normal mb-8">Now you can forget about cooking <br>with our service</p>
-                <a href="#subscribe" class="px-5 inline py-3 text-sm font-medium leading-5 shadow-2xl text-white transition-all duration-400 border border-transparent rounded-lg focus:outline-none bg-green-600 hover:bg-orange-400 hover:text-white">Subscribe</a>
+    <div class="container px-4 h-screen mt-24 py-32 mx-auto text-left md:max-w-none md:text-center">
+        <h1 class="text-5xl font-extrabold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl">
+            <span class="inline md:block">Forget about cooking</span>
+            <span class="relative mt-2 text-transparent bg-clip-text bg-gradient-to-br from-lime-400 to-lime-400 md:inline-block">with <span>GoFood</span></span>
+        </h1>
+        <div class="flex flex-col items-center mt-12 text-center">
+                <dh-component>
+            <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+            <div class="py-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
+                <div role="alert" class="mx-auto w-11/12 md:w-2/3">
+                    <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+                        <div class="w-full flex justify-start text-gray-600 mb-3">
+                            <svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="52" height="52" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
+                                <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
+                            </svg>
+                        </div>
+                        <h1 class="text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Enter Billing Details</h1>
+                        <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Owner Name</label>
+                        <input id="name" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="James" />
+                        <label for="email2" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Card Number</label>
+                        <div class="relative mb-5 mt-2">
+                            <div class="absolute text-gray-600 flex items-center px-4 border-r h-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <rect x="3" y="5" width="18" height="14" rx="3" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                    <line x1="7" y1="15" x2="7.01" y2="15" />
+                                    <line x1="11" y1="15" x2="13" y2="15" />
+                                </svg>
+                            </div>
+                            <input id="email2" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border" placeholder="XXXX - XXXX - XXXX - XXXX" />
+                        </div>
+                        <label for="expiry" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Expiry Date</label>
+                        <div class="relative mb-5 mt-2">
+                            <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <rect x="4" y="5" width="16" height="16" rx="2" />
+                                    <line x1="16" y1="3" x2="16" y2="7" />
+                                    <line x1="8" y1="3" x2="8" y2="7" />
+                                    <line x1="4" y1="11" x2="20" y2="11" />
+                                    <rect x="8" y="15" width="2" height="2" />
+                                </svg>
+                            </div>
+                            <input id="expiry" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
+                        </div>
+                        <label for="cvc" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">CVC</label>
+                        <div class="relative mb-5 mt-2">
+                            <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                                </svg>
+                            </div>
+                            <input id="cvc" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
+                        </div>
+                        <div class="flex items-center justify-start w-full">
+                            <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">Submit</button>
+                            <button class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm" onclick="modalHandler()">Cancel</button>
+                        </div>
+                        <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="modalHandler()" aria-label="close modal" role="button">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-            
-            <div class="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">
-                <img src="./img/hero.png" class="" alt="">
+            <div class="w-full flex justify-center py-12" id="button">
+                <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mx-auto transition duration-150 ease-in-out bg-green-400 rounded-full text-white px-4 py-4 sm:px-8 py-2 text-xs sm:text-sm" onclick="modalHandler(true)">Get Subscription | only $12/day</button>
             </div>
+        </dh-component>
+            <a href="#plans" class="mt-3 text-sm text-indigo-500">See all Plans</a>
         </div>
     </div>
 
     <!-------------------------ABOUT US----------------------->
     <div>
-        <section class="text-blueGray-700 bg-white mt-20">
+        <section class="text-blueGray-700 bg-white">
             <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
                 <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
-                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">We offer affordable yet balanced diets for you</h1>
-                    <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">Maximum health benefit without breaking the bank is our core value</p>
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">We offer <span class="text-amber-300">affordable</span> yet <span class="text-amber-300">balanced</span> diets for you</h1>
+                    <p class="mb-8 text-lg leading-relaxed text-left text-gray-800 ">Maximum health benefit without breaking the bank is our core value</p>
                 </div>
                 <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
                     <img class="object-cover object-center rounded-lg " alt="hero" src="./img/about1.png">
@@ -80,10 +148,10 @@
                     <img class="object-cover object-center rounded-lg " alt="hero" src="./img/about2.png">
                 </div>
                 <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:mb-0">
-                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Flexible plans for differently busy people </h1>
-                    <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">7 days plan</p>
-                    <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">14 days plan</p>
-                    <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">28 days plan</p>
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font"><span class="text-indigo-500">Flexible</span> plans for differently <span class="text-indigo-500">busy people</span> </h1>
+                    <p class="mb-2 text-lg leading-relaxed text-left text-gray-800 ">7 days plan</p>
+                    <p class="mb-2 text-lg leading-relaxed text-left text-gray-800 ">14 days plan</p>
+                    <p class="mb-8 text-lg leading-relaxed text-left text-gray-800 ">28 days plan</p>
                 </div>
             </div>
         </section>
@@ -91,7 +159,7 @@
         <section class="text-blueGray-700 bg-white mt-18">
             <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
                 <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
-                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Best quality for the best price</h1>
+                    <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Best <span class="text-lime-400">quality</span> for the best <span class="text-lime-400">price</span></h1>
                     <p class="mb-8 text-base leading-relaxed text-left text-blueGray-600 ">We work only with trusted suppliers of ingredients for our delicious meals. You don't have to worry about the food being fresh.</p>
                 </div>
                 <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
@@ -137,17 +205,159 @@
     </section>
 
     <!---------------------------------------------------------------->
-    <section class="text-blueGray-700 bg-white mt-20">
-        <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28">
-            <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
-                <img class="object-cover object-center rounded-lg " alt="hero" src="./img/qp.png">
+    <div class="w-full">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+            <div class="text-center pb-12">
+                <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+                    Quality packaging
+                </h1>
+                <h2 class="pt-4 text-xl font-bold text-gray-800">
+                    Your meals come <span class="text-lime-400">packaged</span> with only <span class="text-lime-400">food compatible materials</span>
+                </h2>
             </div>
-            <div class="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:mb-0">
-                <h1 class="mb-8 text-2xl font-bold tracking-tighter text-black md:text-5xl title-font">Quality packaging</h1>
-                <p class="mb-2 text-base leading-relaxed text-left text-blueGray-600 ">Your meals come packaged with only food compatible materials</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+                    <div class="w-full h-80">
+                        <img class="object-center object-cover w-full h-full" src="./img/qp.png" alt="photo">
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+                    <div class="w-full h-80">
+                        <img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480" alt="photo">
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+                    <div class="w-full h-80">
+                        <img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/photo-1518164147695-36c13dd568f5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480" alt="photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!---------------------------------------------------------------->
+    <div class="min-h-screen flex justify-center items-center" id="plans">
+        <div class="">
+            <div class="text-center font-semibold">
+                <h1 class="text-5xl">
+                    <span class="text-indigo-700 tracking-wide">Flexible </span>
+                    <span>Plans</span>
+                </h1>
+                <p class="pt-6 text-xl text-gray-800 font-normal w-full px-8 md:w-full">
+                    Choose a plan that works best for you
+                </p>
+            </div>
+            <div class="pt-24 flex flex-row">
+                <!-- Basic Card -->
+                <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
+                    <h1 class="text-black font-semibold text-2xl">Start</h1>
+                    <p class="pt-2 tracking-wide">
+                        <span class="text-gray-400 align-top">$ </span>
+                        <span class="text-3xl font-semibold">9.99</span>
+                        <span class="text-gray-400 font-medium">/ day</span>
+                    </p>
+                    <hr class="mt-4 border-1">
+                    <div class="pt-8">
+                        <p class="font-semibold text-gray-400 text-left">
+                            <span class="pl-2">
+                                Starter pack of <span class="text-black">dishes</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                Starter pack of <span class="text-black">dishes</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                Starter pack of <span class="text-black">dishes</span>
+                            </span>
+                        </p>
+                        <a href="#" class="">
+                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                <span class="font-medium">
+                                    Choose Plan
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <!-- StartUp Card -->
+                <div class="w-80 p-8 bg-gray-100 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+                    <h1 class="text-black font-semibold text-2xl">Standard</h1>
+                    <p class="pt-2 tracking-wide">
+                        <span class="text-gray-400 align-top">$ </span>
+                        <span class="text-3xl text-black font-semibold">12</span>
+                        <span class="text-gray-400 font-medium">/ day</span>
+                    </p>
+                    <hr class="mt-4 border-1 border-gray-600">
+                    <div class="pt-8">
+                        <p class="font-semibold text-gray-400 text-left">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Start</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Start</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Start</span>
+                            </span>
+                        </p>
+
+                        <a href="#" class="">
+                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                <span class="font-medium">
+                                    Choose Plan
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="absolute top-4 right-4">
+                        <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
+                    </div>
+                </div>
+                <!-- Enterprise Card -->
+                <div class="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
+                    <h1 class="text-black font-semibold text-2xl">Premium</h1>
+                    <p class="pt-2 tracking-wide">
+                        <span class="text-gray-400 align-top">$ </span>
+                        <span class="text-3xl font-semibold">14</span>
+                        <span class="text-gray-400 font-medium">/ day</span>
+                    </p>
+                    <hr class="mt-4 border-1">
+                    <div class="pt-8">
+                        <p class="font-semibold text-gray-400 text-left">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Standard</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Standard</span>
+                            </span>
+                        </p>
+                        <p class="font-semibold text-gray-400 text-left pt-5">
+                            <span class="pl-2">
+                                All features in <span class="text-black">Standard</span>
+                            </span>
+                        </p>
+
+                        <a href="#" class="">
+                            <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                <span class="font-medium">
+                                    Choose Plan
+                                </span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!---------------------------------------------------------------->
     <div class="bg-white flex items-center justify-center mt-24 mb-24">
@@ -190,24 +400,7 @@
     </div>
     <!-----------------------------FOOTER---------------------------------->
     <div class="h-screen flex" id="subscribe">
-        <div class="flex w-1/2 bg-gradient-to-bl from-gray-300 to-green-600 i justify-around items-center">
-          <div>
-            <h1 class="text-white font-bold text-4xl font-sans">Ready to get Started?</h1>
-              <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto mt-4">
-                  <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">Leave Your Question</h1>
-                  <div class="space-y-4">
-                      <div>
-                          <label for="title" class="text-lx font-serif">Email:</label>
-                          <input type="email" placeholder="email" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
-                      </div>
-                      <div>
-                          <label for="description" class="block mb-2 text-lg font-serif">Question:</label>
-                          <textarea id="description" cols="30" rows="10" placeholder="Your Question" class="w-full font-serif  p-4 text-gray-600 bg-gray-50 outline-none rounded-md"></textarea>
-                      </div>
-                      <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-orange-400">Send</button>
-                  </div>
-              </div>
-          </div>
+        <div class="flex w-1/2 justify-around items-center" style="background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1010')">
         </div>
         <div class="flex w-1/2 justify-center items-center bg-white">
           <form class="bg-white" action="/index" method="post">
@@ -235,5 +428,36 @@
       </div>
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        let modal = document.getElementById("modal");
+        function modalHandler(val) {
+            if (val) {
+                fadeIn(modal);
+            } else {
+                fadeOut(modal);
+            }
+        }
+        function fadeOut(el) {
+            el.style.opacity = 1;
+            (function fade() {
+                if ((el.style.opacity -= 0.1) < 0) {
+                    el.style.display = "none";
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+        function fadeIn(el, display) {
+            el.style.opacity = 0;
+            el.style.display = display || "flex";
+            (function fade() {
+                let val = parseFloat(el.style.opacity);
+                if (!((val += 0.2) > 1)) {
+                    el.style.opacity = val;
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+    </script>
 </body>
 </html>

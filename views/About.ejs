@@ -11,11 +11,11 @@
 <body>
 <!-----------------------------NAVBAR----------------------------------->
 <div>
-    <div class="antialiased">
-        <div class="w-full text-gray-700 bg-gradient-to-r from-lime-200 to-lime-500 shadow-xl dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div class="antialiased bg-gray-100">
+        <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="flex flex-row items-center justify-between p-4">
-                    <a href="/" class="text-2xl font-bold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-green-500">Go</span><span class="text-orange-500">Food</span></a>
+                    <a href="/" class="text-2xl font-bold tracking-widest rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-lime-300">Go</span><span class="text-amber-300">Food</span></a>
                     <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                             <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -23,21 +23,22 @@
                         </svg>
                     </button>
                 </div>
-
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                    <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-                    <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
-                    <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
-                    <a class="px-4 py-2 mt-2 text-sm text-gray-200 font-semibold bg-orange-400 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#subscribe">Subscribe</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-emerald-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://t.me/gofooderbot">Our Bot</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-amber-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/subscrible">Subscribe</a>
                 </nav>
             </div>
         </div>
     </div>
 </div>
+
 <!-----------------------------NAVBAR----------------------------------->
 
 <!-----------------------------HERO----------------------------------->
-<div class="w-screen flex items-center justify-center ">
+<div class="w-screen h-screen flex items-center justify-center ">
     <div class="container flex flex-col md:flex-row items-center justify-between px-5 text-gray-700 mb-40 mt-40">
         <div class="w-full lg:w-1/2 mx-8">
             <div class="text-7xl text-green-500 font-dark font-extrabold mb-8">We are GoFood</div>
@@ -52,24 +53,7 @@
 <!-----------------------------HERO----------------------------------->
 <!-----------------------------FOOTER---------------------------------->
 <div class="h-screen flex" id="subscribe">
-    <div class="flex w-1/2 bg-gradient-to-bl from-gray-300 to-green-600 i justify-around items-center">
-        <div>
-            <h1 class="text-white font-bold text-4xl font-sans">Ready to get Started?</h1>
-            <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto mt-4">
-                <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">Leave Your Question</h1>
-                <div class="space-y-4">
-                    <div>
-                        <label for="title" class="text-lx font-serif">Email:</label>
-                        <input type="email" placeholder="email" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
-                    </div>
-                    <div>
-                        <label for="description" class="block mb-2 text-lg font-serif">Question:</label>
-                        <textarea id="description" cols="30" rows="10" placeholder="Your Question" class="w-full font-serif  p-4 text-gray-600 bg-gray-50 outline-none rounded-md"></textarea>
-                    </div>
-                    <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-orange-400">Send</button>
-                </div>
-            </div>
-        </div>
+    <div class="flex w-1/2 justify-around items-center" style="background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1010')">
     </div>
     <div class="flex w-1/2 justify-center items-center bg-white">
         <form class="bg-white" action="/index" method="post">

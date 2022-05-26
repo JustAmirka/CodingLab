@@ -1,0 +1,114 @@
+<div>
+  <div class="antialiased bg-gray-100">
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+      <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="flex flex-row items-center justify-between p-4">
+          <a href="#" class="text-2xl font-bold tracking-widest rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><span class="text-lime-300">Go</span><span class="text-amber-300">Food</span></a>
+          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-emerald-200 focus:outline-none focus:shadow-outline" href="/about">About</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/features">Features</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/HowIW">How Does It Work?</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-emerald-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="https://t.me/gofooderbot">Our Bot</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-amber-300 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#plans">Subscribe</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+z<div class="container cart">
+  <% if (cart != null && !cart.paid ) { %>
+  <div class="row">
+    <div class="col-md-11 col-sm-12 m-auto table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr >
+            <th>Product</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>Quantity</th>
+            <th>&nbsp;</th>
+            <th>Total</th>
+            <th>Subtotal</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% products.forEach( product => { %> <% if(product != null) {%>
+          <tr class="my-auto">
+            <td>
+              <a
+              href="/products/<%=product.category%>/<%=product._id%>"
+            >
+              <img src="<%=product.imagePath%>" class="img-fluid img-thumbnail" alt="..." />
+              </a>
+            </td>
+            <td>
+              <div class="float-left mb-3">
+                <a class="title-link"
+                href="/products/<%=product.category%>/<%=product._id%>"
+              >
+                <h6 class="text-left"><%= product.title %></h6> 
+                <p class="text-left">Product No: <%= product.productCode %></p>
+              </div>
+              
+              </a>
+            </td>
+            <td class="text-center">
+              <a href="/add-to-cart/<%=product._id%>"
+                ><i class="fa fa-plus-square" aria-hidden="true"></i
+              > </a>
+            </td>
+            <td class="text-center">
+              <p class="qty-display pt-1">
+              <%= product.qty %>
+            </p>
+          </td>
+            <td class="text-center" >
+              <a href="/reduce/<%=product._id%>"
+                ><i class="fa fa-minus-square" aria-hidden="true"></i
+              ></a>
+            </td>
+            <td>$<%= product.price %></td>
+            <td>$<%= product.totalPrice %></td>
+            <td>
+              <a
+                href="/removeAll/<%=product._id%>"
+                class="btn btn-danger btn-sm button-style-danger"
+                >Remove all</a
+              >
+            </td>
+          </tr>
+          <% } %> <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<hr>
+  <div class="row mt-4 mr-auto">
+    <div class="col-md-11 col-sm-12 m-auto">
+      <strong>Total: <%= cart.totalCost %> </strong>
+    </div>
+  </div>
+  <div class="row mt-2 mr-auto">
+    <div class="col-md-11 col-sm-12 m-auto">
+      <a href="/checkout" class="btn btn-dark button-style">Checkout</a>
+    </div>
+  </div>
+  <% } else { %>
+  <div class="row text-center">
+    <div class="col-md-9 col-sm-9 m-auto">
+      <h2>No items in the cart</h2>
+    </div>
+  </div>
+
+  <% } %>
+</div>
+
+<%- include ../partials/footer %>

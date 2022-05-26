@@ -19,7 +19,7 @@ app.use("/", require("./home"));
 
 
 app.use("/about", require("./about"));
-
+app.use("/subscrible", require("./subscrible"));
 
 app.use("/HowIW", require("./HowIW"));
 app.use("/features", require("./features"));
